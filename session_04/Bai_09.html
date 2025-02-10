@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Ứng dụng ảnh mèo</h1>
+    <h3>Ảnh mèo</h3>
+    <p>
+        <span>Mọi người đều rất yêu quý </span><span> <a href="https://pixabay.com/vi/images/search/cute%20cat/"> những chú mèo đáng yêu </a></span>
+    </p>
+    <p>
+        <span>Đây là một số hình </span><span> <a href="https://www.pinterest.com/Nhinguyen161112/m%C3%A8o-cute-m%C3%A8o-th%E1%BA%ADt/"> ảnh mèo </a> tại thư viện chúng tôi </span>
+    </p>
+    <img src="./img/Mèo.jpg" alt="" width="450px" height="450px">
+    <h3>Danh sách về mèo</h3>
+    <h4>Thứ mà mèo yêu thích:</h4>
+    <ul>
+        <li>lasagna</li>
+        <li>chơi với laser</li>
+        <li>Ngủ</li>
+        <img src="./img/lasagna.jpg" alt="" width="450px" height="450px">
+    </ul>
+    <h3>Top 3 thứ mà mèo ghét:</h3>
+    <ol>
+        <li>Chó</li>
+        <li>Ồn ào</li>
+        <li>Nước</li>
+        <img src="./img/Mèo Hate.jpg" alt="" width="450px" height="450px">
+        <p>Mèo <b>ghét</b> các con mèo khác</p>
+    </ol>
+    <h2>Giống mèo</h2>
+
+<table border="1">
+    <tr>
+        <th>giống mèo</th>
+        <th>Nguồn gốc</th>
+        <th>Loại</th>
+        <th>kiểu cơ thể</th>
+        <th>loại lông và chiều dài</th>
+        <th>Hoa văn lông</th>
+        <th>Hình ảnh</th>
+    </tr>
+    <tr>
+        <th><a href="https://en.wikipedia.org/wiki/Abyssinian_cat">Abyssinian<sup>[8]</sup></a</th>
+        <th>Không xác định, nhưng có thể từ Afro-Á, có khả năng là <a href="https://vi.wikipedia.org/wiki/Ethiopia">Ethiopia<sup>[9]</sup></a></th>
+        <th>Tự nhiên</th>
+        <th>Bán ngoại lai</th>
+        <th>Ngắn</th>
+        <th>Vằn tích</th>
+        <th><img src="./img/Mèo abyssinian.jpeg" alt="" width="150px" height="150px"></th>
+    </tr>
+    <tr>
+        <th><a href="https://en.wikipedia.org/wiki/Aegean_cat">Aegean</a></th>
+        <th>Hy Lạp</th>
+        <th>Tự nhiên</th>
+        <th>Trung bình</th>
+        <th>Bán dài</th>
+        <th>Đa màu</th>
+        <th><img src="./img/Mèo cam.jpg" alt="" width="150px" height="150px"></th>
+    </tr>
+    <tr>
+        <th><a href="https://en.wikipedia.org/wiki/American_Bobtail">American Bobtail<sup>[10]</sup></a></th>
+        <th>Hoa Kỳ<sup>[11]</sup></th>
+        <th>Đột biến của đuôi ngắn</th>
+        <th>Cobby (cơ bắp, chắc nịch)</th>
+        <th>Bán dài</th>
+        <th>Tất cả</th>
+        <th><img src="./img/Mèo đuôi cụt.jpg" alt="" width="150px" height="150px"></th>
+    </tr>
+    <tr>
+        <th><a href="https://en.wikipedia.org/wiki/American_Curl">American Curl<sup>[12]</sup></a></th>
+        <th>Hoa Kỳ<sup>[11]</sup></th>
+        <th>Đột biến</th>
+        <th>Bán ngoại lai</th>
+        <th>Bán dài</th>
+        <th>Tất cả</th>
+        <th><img src="./img/Mèo mỹ tai xoăn.jpg" alt="" width="150px" height="150px"></th>
+    </tr>
+    <tr>
+        <th><a href="https://en.wikipedia.org/wiki/Ringtail">American Ringtail</a></th>
+        <th>Hoa Kỳ<sup>[11]</sup></th>
+        <th>Đột biến</th>
+        <th>Ngoại lai</th>
+        <th>Bán dài</th>
+        <th>Tất cả</th>
+        <th><img src="./img/Mèo đuôi vòng.jpg" alt="" width="150px" height="150px"></th>
+    </tr>
+
+</table>
+
+<form>
+    <p>Mèo của bạn là mèo trong nhà hay ngoài trời?</p>
+    <input type="radio" id="trong-nha" name="loai-meo" value="trong-nha" checked>
+    <label for="trong-nha">Trong nhà</label>
+    <input type="radio" id="ngoai-troi" name="loai-meo" value="ngoai-troi">
+    <label for="ngoai-troi">Ngoài trời</label>
+
+    <p>Tính cách của mèo bạn thế nào?</p>
+    <input type="checkbox" id="yeu-thuong" name="tinh-cach" value="yeu-thuong" checked>
+    <label for="yeu-thuong">Yêu thương</label>
+    <input type="checkbox" id="luoi-bieng" name="tinh-cach" value="luoi-bieng">
+    <label for="luoi-bieng">Lười biếng</label>
+    <input type="checkbox" id="nang-dong" name="tinh-cach" value="nang-dong">
+    <label for="nang-dong">Năng động</label>
+
+    <br><br>
+    <input type="text" placeholder="URL ảnh mèo">
+    <button type="submit">Gửi</button>
+</body>
+</html>
