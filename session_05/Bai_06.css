@@ -1,0 +1,37 @@
+.content{
+    color: brown;
+}
+.content1{
+    border: 5px solid #04AA6D;
+    text-align: center;
+
+}
+.content2{
+    background-color: silver;
+}
+.content3{
+    border-left:5px solid #04AA6D;
+    background-color: aliceblue;
+}
+.content4{
+ color: brown;
+}
+.content5{
+  color: red;
+}
+.content6{
+color: blue;
+}
+.content7{
+color: red;
+}
+.content8{
+color: blue;
+}
+.content9{
+    border-radius: 8px;
+background-color: #04AA6D;
+width: 150px;
+height: 50px;
+color: aliceblue;
+}

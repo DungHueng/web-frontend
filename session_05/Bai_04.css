@@ -1,0 +1,28 @@
+/*reset CSS*/
+.body{
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+}
+.table{
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+}
+.subtitle{
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    display: flex;
+}
+.content{
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+}
+.text{
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+}
