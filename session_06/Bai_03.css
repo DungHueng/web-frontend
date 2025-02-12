@@ -1,0 +1,44 @@
+.img{
+    width: 130px;
+    border-radius: 100%;
+}
+.content{
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 50px;
+    line-height: 3;
+}
+.content1{
+    font-size: 20px;
+}
+.content2{
+    font-size: 14px;
+    width: 80%;
+}
+.content3{
+    background-color: silver;
+}
+.projects{
+    background-color: black;
+    color: white;
+    width: 300px;
+    height: 30px;
+    line-height: 3;
+    text-align: center;
+    border-radius: 10px;
+
+}
+.content5{
+    background-color: silver;
+    text-align: center;
+    height: 30px;
+    line-height: 2;
+
+}
+.content6{
+    font-weight: bolder;
+}
+.content0{
+    text-align: center;
+}
