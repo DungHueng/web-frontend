@@ -1,0 +1,40 @@
+.title{
+
+    background-color: black;
+    color:#fff;
+     position: relative;
+     height: 50px;
+} 
+.content{
+     position:absolute;
+    padding-left: 100px;
+
+}
+.content1{
+    position: absolute;
+    text-decoration: none;
+    padding-left: 700px;
+}
+.subtitle{
+ background-color: #fff;
+padding-left: 100px;
+}
+.sub{
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    height: 40px;
+    line-height: 2.4;
+}
+.item{
+ background-color: silver;
+ width:65% ;
+
+}
+.item1{
+    background-color: rgb(197, 180, 180);
+    width: 65%;
+}
+.text{
+    color: gainsboro;
+}

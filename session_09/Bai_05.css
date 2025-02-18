@@ -1,0 +1,41 @@
+body {
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    margin: 0;
+}
+
+.bg {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    width: 600px;
+    border-radius: 10px;
+}
+
+.number {
+    position: relative;
+    border-radius: 4px;
+    background-color: rgba(128, 0, 128, 255);
+    width: 95px;
+    height: 45px;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    line-height: 40px;
+}
+
+.number1 {
+    border-radius: 4px;
+    background-color: rgba(128, 0, 128, 255);
+    width: 95px;
+    height: 45px;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    position: absolute;
+    left: 525px;
+    top: 55px;
+    line-height: 40px;
+}

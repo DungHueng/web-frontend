@@ -1,0 +1,51 @@
+.content {
+    font-family: arial;
+    border: 1px solid;
+    border-radius: 5px;
+    position: relative;
+}
+
+.content1 {
+    font-family: arial;
+    width: 99%;
+    height: 30px;
+}
+
+.content2 {
+    font-family: arial;
+    width: 99%;
+    height: 50px;
+}
+
+.content3 {
+    font-family: arial;
+    position: absolute;
+    right: 1px;
+}
+
+.content4 {
+    font-family: arial;
+    background-color: cadetblue;
+    border-radius: 5px;
+    height: 35px;
+    border: 0px;
+    color: white;
+}
+
+.content5 {
+    background-color: blueviolet;
+    border-radius: 5px;
+    width: px;
+    height: 35px;
+    border: 0px;
+    color: white;
+}
+
+.content6 {
+    font-weight: bold;
+}
+
+.content7 {
+    padding-left: 830px;
+
+}

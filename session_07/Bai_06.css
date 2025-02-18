@@ -1,0 +1,24 @@
+.content{
+    font-family: arial;
+    border: 1px solid;
+    position: relative;
+}
+.content1{
+    position:absolute;
+    right: 1px;
+}
+.content2{
+    background-color: rgba(208,226,255,255);
+    height: 45px;
+    line-height: 3;
+}
+
+
+.content3{
+   font-family: arial;
+   font-weight: bold;
+}
+.content4{
+    font-family: arial;
+   color: rgba(223,96,159,255);
+}

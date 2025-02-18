@@ -1,0 +1,38 @@
+body {
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    margin: 0;
+}
+
+.bg {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    width: 1000px;
+    border: 2px solid rgba(139, 139, 139, 255);
+    padding: 10px;
+    background-color: rgba(246, 249, 252, 255);
+}
+
+.number {
+    border-radius: 4px;
+    font-family: Arial;
+    color: rgba(141, 217, 255, 255);
+    background-color: rgba(53, 152, 219, 255);
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+.number1 {
+    border-radius: 4px;
+    font-family: Arial;
+    grid-column: span 2;
+    color: rgba(141, 217, 255, 255);
+    background-color: rgba(53, 152, 219, 255);
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}

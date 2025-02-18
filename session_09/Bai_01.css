@@ -1,0 +1,23 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.container{
+
+    width: 200px;
+    height: 200px;
+    border: 1px solid rgba(31,31,31,255);
+    background-color: rgba(240,240,240,255);
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .item{
+    color: rgba(255,239,241,255);
+    width: 70px;
+    height: 70px;
+    background-color: rgba(52,152,219,255);
+    text-align: center;
+    line-height: 70px;
+}
