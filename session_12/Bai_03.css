@@ -1,0 +1,19 @@
+.bg{
+    width: 400px;
+    height: 400px;
+    margin-left: 10px;
+    background-color: aliceblue;
+    border-radius: 10px;
+}
+.off{
+    position: relative;
+    left: 100px;
+}
+body{
+    background-color: rgba(127,127,127,255);
+}
+
+.font{
+    font-size: 30px;
+    font-weight: 700;
+}
