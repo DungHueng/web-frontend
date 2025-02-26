@@ -1,0 +1,153 @@
+.header_top{
+    font-family: Arial;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 12%;
+    padding: 5%;
+}
+
+.title1{
+    font-family: Arial;
+}
+
+.about{
+    font-family: Arial;
+}
+
+.button{
+    font-family: Arial;
+    font-size: 22px;
+}
+
+.header_top a{
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    font-size: 20px;
+}
+.title{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10%;
+    margin-right: 15%;
+}
+.title nav{
+    font-size: 44px;    
+    font-weight: 600;
+}
+.title span{
+    font-weight: 300;
+}
+.title button{
+    border: none;
+    background-color: tomato;
+    color: white;
+    width: 208px;
+    height: 47px;
+    margin-top: 10%;
+}
+.main-body{
+    width: 100%;
+    background-color: #EDF7FA;
+    margin-top: 9%;
+}
+.main-top{
+    display: grid;
+    width: 80%;
+    margin-left: 10%;
+    height: 350px;
+    align-items: center;
+}
+.main-body .main-top .title-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main-body .main-top .title-top h5{
+    font-size: 22px;
+    font-weight: 400;
+}
+.main-body .main-top .title-top a{
+    text-decoration: none;
+    color: #00A8CC;
+}
+.main-body .main-top .card-group{
+    display:grid;
+    flex-direction: column;
+    grid-template-columns: repeat(2,1fr);
+    gap: 15px;
+}
+.main-body .main-top .card-group .card-body{
+    background-color: rgb(255, 255, 255);
+    height: 200px;
+}
+.main-body .main-top .card-group .card-body .card-title{
+    font-family: Arial;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 38px;
+}
+.main-body .main-top .card-group .card-body .card-time{
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400px;
+    font-family: Arial;
+}
+.main-body .main-top .card-group .card-body .card-text{
+    font-family: Arial;
+    line-height: 25px;
+    font-weight: 400;
+}
+.main-footer{
+    width: 80%;
+    margin-left: 10%;
+}
+.main-footer .title-footer{
+    margin-top: 12px;
+    font-family: Arial;
+    font-size: 22px;
+}
+.main-footer .card{
+    display: flex;
+    gap: 20px;
+    margin-top: 12px;
+}
+.main-footer .card .card-body .card-title{
+    font-family: Arial;
+    font-weight: 700;
+    font-size: 30px;
+}
+.main-footer .card .card-body .card-text small{
+    background-color: #142850;
+    border-radius: 20px;
+    color: white;
+    padding: 3px;
+}
+.main-footer .card .card-body .card-text {
+    font-family: Arial;
+    font-size: 16px;
+    display: flex;
+    gap: 10px;
+    padding: 12px;
+}
+hr{
+    padding-top: 12px;
+    border: none;
+    border-top: 1px solid;
+}
+.end{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    padding-top: 5%;
+    margin-left: 4%;
+    font-size: 45px;
+}
+.end img{
+    padding-left: 32px;
+}
+span{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px
+}

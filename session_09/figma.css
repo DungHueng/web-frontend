@@ -1,0 +1,64 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial;
+}
+/* Phần đầu */
+.header{
+   background-color: black;
+   color: white;
+   width: 1440px;
+   height: 48px;
+   line-height: 50px;
+}
+.header .content{
+    margin-left: 450px;
+}
+.header .option{
+    position: absolute;
+    margin-left: 1200px;
+    top: 15px;
+    color: white;
+    background-color: black;
+}
+.header .title{
+    color: white;
+    font-weight: 700;
+}
+.header .about{
+    color: black;
+    margin-left: 50px;
+    font-size: 30px;
+    font-weight: 600;
+}
+.header a{
+    text-decoration: none;
+}
+.header .text{
+    text-align: right;
+    margin-left: 430px;
+    font-size: 20px;
+    font-weight: 300;
+    color: black;
+}
+.header .search{
+    width: 250px;
+    height: 30px;
+    margin-left: 170px;
+}
+
+.header i{
+    font-size: 13px;
+    position: absolute;
+    top: 74px;
+    right: 155px;
+}
+/* Phần thân */
+.main{
+
+}
+
+/* phần cuối */
+.footer{
+
+}
