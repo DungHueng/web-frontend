@@ -1,5 +1,5 @@
-let firstnumber = Number(prompt("Hãy nhập số thứ nhất: "));
-let secondnumber = Number(prompt("Hãy nhập số thứ hai: "));
+let firstnumber = +prompt("Hãy nhập số thứ nhất: ");
+let secondnumber = +prompt("Hãy nhập số thứ hai: ");
 let max = Math.max(firstnumber,secondnumber);
 let min = Math.min(firstnumber,secondnumber);
 if (!isNaN(firstnumber) && !isNaN(secondnumber)) { 
