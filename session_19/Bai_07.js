@@ -1,9 +1,5 @@
-let Number1 = +prompt("nhập số thứ nhất: ");
-let Number2 = +prompt("nhập số thứ hai: ");
-let Number3 = +prompt("nhập số thứ ba: ");
-let highest = Math.max(Number1,Number2,Number3);
-if(!isNaN(Number1) && !isNaN(Number2) && !isNaN(Number3)){
-    alert("số lớn nhất trong 3 số là: " + highest);
-} else {
-    alert("vui lòng nhập số hợp lệ!");
-}
+let a = Number(prompt("nhập số thứ nhất: "));
+let b = Number(prompt("nhập số thứ hai: "));
+let c = Number(prompt("nhập số thứ ba: "));
+let max = (a>b)?((a>c)?a:c):((b>c)?b:c);
+ alert("số lớn nhất trong 3 số là "+max);
