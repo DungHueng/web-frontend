@@ -3,4 +3,8 @@ if(text.includes("0")|| text.includes("1")|| text.includes("2")|| text.includes(
     alert(text + " không phải chữ cái");
 } else {
     alert("ký tự " + text + " là chữ cái");
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 5863fc533380db9c314fe8f19fec9b833b2bce7b
