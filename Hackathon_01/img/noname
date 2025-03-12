@@ -1,0 +1,24 @@
+let array = [];
+
+function input() {
+    for (let i = 0; i < 10; i++) {
+        array[i] = +prompt("Mời bạn nhập phần tử thứ " + (i + 1));
+    }
+}
+function numbers(a) {
+    if (!Array.isArray(a)) {
+        console.log("Dữ liệu không hợp lệ");
+        return;
+    }
+    if (a.length == 0) {
+        console.log("Mảng không có phần tử nào");
+        return;
+    }
+    for (let i = 0; i < a.length; i++) {
+        if (a[i] > 10) {
+            console.log(a[i]);
+        }
+    }
+}
+input();
+numbers(array);
