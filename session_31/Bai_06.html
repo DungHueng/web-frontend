@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        border: 3px solid black;
+        height: 300px;
+        width: 300px;
+    }
+
+    .login {
+        margin-left: 30px;
+        margin-top: 30px;
+        font-size: 30px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="login">
+            <b>username:</b><br>
+            <input id="text" type="text"><br>
+            <b>password</b><br>
+            <input id="password" type="password"><br><br>
+            <button onclick="login()">login</button>
+        </div>
+    </div>
+</body>
+<script>
+    function login() {
+        let name = document.getElementById("text").value;
+        let password = document.getElementById("password").value;
+        if (name == "huanrose@gmail.com" && password == "123456") {
+            console.log("Đăng nhập thành công");
+
+        } else {
+            console.log("đăng nhập thất bại");
+
+        }
+    }</script>
+
+</html>

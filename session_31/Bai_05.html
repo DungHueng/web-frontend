@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>NAME</th>
+                <th>AGE</th>
+                <th>ADDRESS</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+           
+        </tbody>
+    </table>
+
+</body>
+<script>
+    const empoly  =[
+    {
+        id : 1,
+        name : "john",
+        age:"18",
+        address:"New York",
+    },
+    {
+        id : 2,
+        name : "Mike",
+        age:"22",
+        address:"Canada",
+    },
+    {
+        id : 3,
+        name : "Linda",
+        age:"19",
+        address:"California",
+    },
+    {
+        id : 4,
+        name : "Peter",
+        age:"25",
+        address:"London",
+    },
+    {
+        id : 5,
+        name : "Tony",
+        age:"17",
+        address:"New York",
+    }
+];
+function show (){
+    let str = "";
+    for(i=0;i<empoly.length;i++) {
+        str+=
+        `<tr>
+            <td>${empoly[i].id}</td>
+            <td>${empoly[i].name}</td>
+            <td>${empoly[i].age}</td>
+            <td>${empoly[i].address}</td>
+        </tr>`;
+        
+    }
+    document.getElementById("tbody").innerHTML=str;
+}
+show();
+</script>
+</html>
