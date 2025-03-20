@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        height: 800px;
+      
+    }
+.container  p{
+    margin-left: 500px;
+    padding-top: 100px;
+    width: 300px;
+   
+}
+.big{
+width: 500px;
+height: 600px;
+}
+.small{
+    width: 100px;
+    height: 100px ;
+}
+
+</style>
+<body>
+    <div class="container" onclick="small()">
+        <p>
+            <img onclick="big(event)" id="i" class="small" src="./ảnh/2.png" alt="">
+        </p>
+    </div>
+</body>
+<script>
+    function big(event) {
+    event.stopPropagation(); 
+    let img = document.getElementById("i");
+    img.classList.remove("small");
+    img.classList.add("big");
+}
+
+function small() {
+    let img = document.getElementById("i");
+    img.classList.remove("big");
+    img.classList.add("small");
+}
+</script>
+</html>

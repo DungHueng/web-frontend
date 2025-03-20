@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        background-color: cadetblue;
+        width: 500px;
+        height: 350px;
+    }
+
+    .container h1 {
+        margin-left: 100px;
+    }
+
+    .container1 {
+        background-color: aliceblue;
+        width: 450px;
+        height: 260px;
+        border-radius: 6px;
+        margin-left: 20px;
+    }
+
+    .container1 p {
+        margin-left: 100px;
+    }
+
+    .btn {
+        background-color: brown;
+        width: 60px;
+        height: 20px;
+    }
+
+    .x {
+        width: 30px;
+        height: 30px;
+        background-color: red;
+        margin-left: 350px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h1>To-Do List K24_PTIT</h1>
+        <div class="container1">
+            <p> <input id="text" type="text" placeholder="Nhập nhiệm vụ...">
+                <button class="btn" onclick="add()">Thêm</button>
+            </p><br>
+            <ul id="ul">
+
+            </ul>
+        </div>
+    </div>
+</body>
+<script>
+    let arr = [];
+    function add() {
+        let name = document.getElementById("text").value;
+        arr.push(name);
+        let str = "";
+        for (let i = 0; i < arr.length; i++) {
+            str += `
+     <li>${arr[i]}
+     <button class="x" onclick="dele(${i})">X</button>
+     <hr>
+     </li>
+     `;
+        }
+        document.getElementById("ul").innerHTML = str;
+        document.getElementById("text").value = "";
+    }
+    function update() {
+        let str = "";
+        for (let i = 0; i < arr.length; i++) {
+            str += `
+            <li>${arr[i]} 
+                <button class="x" onclick="removeTask(${i})">X</button>
+            </li>
+        `;
+        }
+        document.getElementById("ul").innerHTML = str;
+    }
+
+    function dele(index) {
+        arr.splice(index, 1);
+        update();
+    }
+</script>
+
+</html>

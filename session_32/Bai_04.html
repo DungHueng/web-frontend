@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        background-color: cadetblue;
+        width: 500px;
+        height: 350px;
+    }
+
+    .container h1 {
+        margin-left: 100px;
+    }
+
+    .click {
+        background-color: aliceblue;
+        width: 450px;
+        height: 260px;
+        border-radius: 6px;
+        margin-left: 20px;
+    }
+
+    .click p {
+        margin-left: 100px;
+    }
+
+    .btn {
+        background-color: brown;
+        width: 60px;
+        height: 20px;
+    }
+
+    .x {
+        width: 30px;
+        height: 30px;
+        background-color: red;
+        margin-left: 350px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h1>To-Do List K24_PTIT</h1>
+        <div class="click">
+            <p> <input id="text" type="text" placeholder="Nhập nhiệm vụ...">
+                <button class="btn" onclick="add()">Thêm</button>
+            </p><br>
+            <ul id="ul">
+
+            </ul>
+        </div>
+    </div>
+</body>
+<script>
+    function check() {
+        let email = document.getElementById("text").value;
+        if (email.includes("@") && email.endsWith(".com") || email.endsWith(".vn")) {
+            document.getElementById("p").innerHTML = "Email hợp lệ !";
+            document.getElementById("text").value = "";
+            document.getElementsByClassName("p")[0].setAttribute("class", "p1");
+        } else {
+            document.getElementById("p").innerHTML = "Email không hợp lệ !";
+            document.getElementById("text").value = "";
+            document.getElementsByClassName("p")[0].setAttribute("class", "p2");
+        }
+    }
+    function add() {
+        let ul = document.getElementById("ul");
+        let text = document.getElementById("text").value;
+        let li = document.createElement("li");
+        li.appendChild(document.createTextNode(text));
+        ul.appendChild(li);
+        document.getElementById("text").value = "";
+    }
+</script>
+
+</html>

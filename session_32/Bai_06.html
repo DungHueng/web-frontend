@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        width: 500px;
+        height: 300px;
+        background-color: aqua;
+    }
+
+    .container p {
+        margin-left: 100px;
+        padding-top: 50px;
+
+    }
+
+    .container button {
+        margin-left: 150px;
+        width: 30px;
+        height: 30px;
+        background-color: red;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <p class="text">Chữ sẽ thay đổi kích thước khi bấm vào nút </p><br>
+        <button onclick="bigger()">+</button>
+        <button onclick="smaller()">-</button>
+    </div>
+</body>
+<script>
+    let size = 16;
+    function bigger() {
+        document.getElementsByClassName("text")[0].style.fontSize = (size += 2) + "px";
+    }
+    function smaller() {
+        document.getElementsByClassName("text")[0].style.fontSize = (size -= 2) + "px";
+    }
+</script>
+
+</html>
