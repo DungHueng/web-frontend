@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+</head>
+<style>
+    .password-main {
+        position: relative;
+        padding: 15px;
+        font-size: 20px;
+        border-radius: 6px;
+        width: 210px;
+    }
+
+    input {
+        border: none;
+    }
+</style>
+
+<body>
+    <div class="password-main">
+        <input type="password" id="password" placeholder="Enter your password">
+        <i onclick="checkPassword()" class="fa-solid fa-eye"></i>
+    </div>
+</body>
+
+<script>
+    function checkPassword() {
+        var passwordField = document.getElementById("password");
+        if (passwordField.type === "password") {
+            passwordField.type = "text";
+        } else {
+            passwordField.type = "password";
+        }
+
+    }
+</script>
+
+</html>

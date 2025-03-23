@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <select name="" id="filter">
+        <option value="">-- Lựa chọn danh mục--</option>
+        <option value="">Đồ ăn</option>
+        <option value="">Nước</option>
+        <option value="">Dụng cụ</option>
+    </select>
+    <button onclick="filter()">Lọc</button>
+    <ul id="ul">
+
+    </ul>
+</body>
+<script>
+    let dish = [
+        { name: 'Rau sạch', category: 'Đồ ăn' },
+        { name: 'Thịt lợn', category: 'Đồ ăn' },
+        { name: 'Pepsi không calo', category: 'Nước' },
+        { name: 'Cocacola', category: 'Nước' },
+        { name: 'Cờ lê', category: 'Dụng cụ' },
+        { name: 'Tuy vít', category: 'Dụng cụ' }
+    ];
+
+    function show() {
+        let str = "";
+        for (let i = 0; i < dish.length; i++) {
+            str += `
+  <li><b> Tên đồ ăn:</b> ${dish[i].name} - <b>Danh mục: </b>${dish[i].category}</li>
+  `;
+        }
+        document.getElementById("ul").innerHTML = str;
+    }
+
+    function filter() {
+        let value = document.getElementById("filter").value;
+        let str = "";
+        for (let i = 0; i < dish.length; i++) {
+            if (dish[i].category == value) {
+                str += `
+  <li><b> Tên đồ ăn:</b> ${dish[i].name} - <b>Danh mục: </b>${dish[i].category}</li>
+  `;
+            }
+        }
+        document.getElementById("ul").innerHTML = str;
+    }
+
+    show();
+</script>
+
+</html>

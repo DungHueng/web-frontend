@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <textarea name="" id="text"></textarea>
+    <p id="p"></p><br>
+    <button onclick="check()"> Kiểm tra</button>
+</body>
+<script>
+    function check() {
+        let text = document.getElementById("text").value;
+        let arr = text.split("")
+        let length = text.length;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] == " ") {
+                length--;
+            }
+        }
+        document.getElementById("p").innerHTML = `${length} ký tự`;
+        document.getElementById("text").value = "";
+    }
+    check();
+</script>
+
+</html>
