@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .btn {
+        margin-left: 200px;
+    }
+
+    th,
+    td {
+        border: 1px solid black;
+        padding: 15px;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+
+    .th1 {
+        background-color: #f2f2f2;
+    }
+</style>
+
+<body>
+    <div>
+        <div>
+            <table border="1" cellspacing="0" cellpadding="10">
+                <thead>'
+                    <tr>
+                        <th>tên nhân viên <input id="name" type="text"></th>
+                        <th>chức vụ <input id="position" type="text"></th>
+                    </tr>
+                </thead>
+            </table>
+            <button class="btn" onclick="add()">thêm nhân viên</button>
+        </div>
+        <div>
+            <table border="1" cellspacing="0" cellpadding="10">
+                <thead>
+                    <tr>
+                        <th class="th1" style="width: 50px;">STT</th>
+                        <th class="th1" style="width: 180px;">Tên</th>
+                        <th class="th1" style="width: 240px;">Chức vụ</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+
+        </div>
+    </div>
+</body>
+<script>
+    function show() {
+        let employee = JSON.parse(localStorage.getItem("employee")) || [];
+        let str = "";
+        for (let i = 0; i < employee.length; i++) {
+            str += `
+                    <tr>
+                        <td>${employee[i].id}</td>
+                        <td>${employee[i].name}</td>
+                        <td>${employee[i].position}</td>
+                    </tr>
+       `
+        }
+        document.getElementById("tbody").innerHTML = str;
+    }
+    function add() {
+        let employee = JSON.parse(localStorage.getItem("employee")) || [];
+        let name = document.getElementById("name").value.trim();
+        let position = document.getElementById("position").value.trim();
+        let id = 0;
+        if (employee.length != 0) {
+            id = employee[employee.length - 1].id + 1;
+        } else {
+            id = 1;
+        }
+        let employe = {
+            id: id,
+            name: name,
+            position: position
+        }
+        employee.push(employe);
+        document.getElementById("name").value = "";
+        document.getElementById("position").value = "";
+        localStorage.setItem("employee", JSON.stringify(employee));
+        show();
+    }
+    show();
+</script>
+
+</html>

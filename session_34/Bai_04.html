@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        width: 300px;
+        background-color: rgb(237, 231, 231);
+    }
+
+    .btn {
+        background-color: red;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+        padding: 8px;
+
+    }
+
+    .btn1 {
+        background-color: darkolivegreen;
+        border: none;
+        height: 30px;
+        width: 60px;
+        border-radius: 4px;
+    }
+
+    .text {
+        width: 230px;
+        height: 30px;
+        border-radius: 4px;
+        opacity: 0.5
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div style="margin-left: 20px;">
+            <h1 class="h1">Todo List</h1>
+            <input id="text" class="text" type="text" placeholder="Thêm việc cần làm..."><br>
+            <button class="btn1" onclick="add()">Thêm</button><br><br>
+            <div id="div" class="content">
+
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function show() {
+        let arr = JSON.parse(localStorage.getItem("arr")) || [];
+        let str = "";
+        for (let i = 0; i < arr.length; i++) {
+            str += `
+        <td class="td"><span>${arr[i]}</span>    <button class="btn" onclick="dele(${i})">Xóa</button></td>
+            <hr>
+       `
+        }
+        document.getElementById("div").innerHTML = str;
+    }
+    function add() {
+        let arr = JSON.parse(localStorage.getItem("arr")) || [];
+        let name = document.getElementById("text").value.trim();
+        arr.push(name);
+        localStorage.setItem("arr", JSON.stringify(arr));
+        show();
+    }
+    function dele(index) {
+        let arr = JSON.parse(localStorage.getItem("arr"));
+        arr.splice(index, 1)
+        localStorage.setItem("arr", JSON.stringify(arr));
+        show();
+    }
+    show();
+</script>
+
+</html>

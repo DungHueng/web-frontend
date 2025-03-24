@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        justify-self: center;
+        background-color: #fff;
+      border-radius: 6px;
+      width: 400px;
+      height: 400px;
+    }
+    .content{
+        margin-left: 10px;
+    }
+    .h1{
+        margin-left: 140px;
+    }
+</style>
+<body>
+    <div style="background-color: #f3f3f3;height: 700px;">
+        <div class="container">
+            <div class="container1">
+            <h1 class="h1">Register</h1>
+            <div class="content">
+                <label  for="">Email:</label><br><br>
+                <input id="email" style="width: 300px;height: 25px;" type="text" placeholder="Enter your email address"><br><br>
+                <label for="">Password:</label><br><br>
+                <input id="password" style="width: 300px;height: 25px;" type="password" placeholder="Enter your password"><br><br>
+                <label for="">Confirm Password</label><br><br>
+                <input id="confirmPassword" style="width: 300px;height: 25px;" type="password" placeholder="Enter your confirm password"><br><br>
+                <button style="background-color: blue;width: 310px;color: #fff;height: 30px;border-radius: 4px;" onclick="register()">Register</button>
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
+<script>
+    function  register(){
+    let email=document.getElementById("email").value;
+    let password=document.getElementById("password").value;
+    let confirmPassword=document.getElementById("confirmPassword").value;
+    if(password===confirmPassword&&password.length!=0&&confirmPassword.length!=0&&email.length!=0&&email.includes("@")&&(email.endsWith(".com")||email.endsWith(".vn"))){
+      
+    }else{
+        document.getElementById("email").value="";
+        document.getElementById("password").value="";
+        document.getElementById("confirmPassword").value="";
+        console.log("Dữ liệu không hợp lệ");
+        return;
+    }
+    let user = JSON.parse(localStorage.getItem("user")) || [];
+    let findUser=user.find(item=> item.email==email)
+    if (findUser) {
+        console.log("email đã tồn tại");
+        document.getElementById("email").value="";
+        document.getElementById("password").value="";
+        document.getElementById("confirmPassword").value="";
+        return;
+    }else{
+  user.push({email,password});
+  localStorage.setItem("user", JSON.stringify(user));
+  console.log("Đăng ký thành công");
+  window.location.href="./baitap3.html";
+    }
+}
+</script>
+</html>
