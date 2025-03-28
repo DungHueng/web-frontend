@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .btn1 {
+        background-color: #e74c3c;
+        color: white;
+        width: 70px;
+        height: 40px;
+        border: none;
+        border-radius: 6px;
+    }
+
+    .btn2 {
+        background-color: #3498db;
+        color: white;
+        width: 70px;
+        height: 40px;
+        border: none;
+        border-radius: 6px;
+    }
+
+    .btn3 {
+        background-color: #f1c40f;
+        width: 70px;
+        height: 40px;
+        border: none;
+        border-radius: 6px;
+    }
+
+    .btn4 {
+        background-color: #9b59b6;
+        color: white;
+        width: 70px;
+        height: 40px;
+        border: none;
+        border-radius: 6px;
+    }
+
+    .font {
+        font-family: arial;
+    }
+
+    .content {
+        color: #555555;
+    }
+
+    .title {
+        font-size: 25px;
+    }
+</style>
+
+<body class="font">
+    <div style="height:500px; width: auto;" id="bg" class="tbody">
+        <b class="title">Chọn màu nền bạn yêu thích</b><br><br>
+        <button onclick="changecolor(`red`)" class="btn1">Đỏ</button> &nbsp;&nbsp;&nbsp;
+        <button onclick="changecolor(`blue`)" class="btn2">Xanh</button> &nbsp;&nbsp;&nbsp;
+        <button onclick="changecolor(`yellow`)" class="btn3">Vàng</button> &nbsp;&nbsp;&nbsp;
+        <button onclick="changecolor(`purple`)" class="btn4">Tím</button><br><br><br>
+        <p class="content">Trang sẽ ghi nhớ màu bạn đã chọn kể cả khi tải lại!</p>
+    </div><br><br><br>
+</body>
+<script>
+/*     function changecolor1() {
+        document.getElementById("bg").setAttribute("class", "btn1")
+    }
+    function changecolor2() {
+        document.getElementById("bg").setAttribute("class", "btn2")
+    }
+    function changecolor3() {
+        document.getElementById("bg").setAttribute("class", "btn3")
+    }
+    function changecolor4() {
+        document.getElementById("bg").setAttribute("class", "btn4")
+    } */
+
+    function changecolor(color) {
+        localStorage.setItem("color", color);
+        getItem();
+    }
+
+    function getItem() {
+        let color = localStorage.getItem("color");
+        document.getElementsByClassName("tbody")[0].style.background = color;
+    }
+    getItem();
+
+</script>
+
+</html>

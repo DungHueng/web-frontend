@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .tbody {
+        background-color: #f5f6f8;
+    }
+
+    .bg {
+        border-radius: 6px;
+        margin-top: 200px;
+        margin-left: 500px;
+        text-align: center;
+        background-color: #ffffff;
+        width: 440px;
+        height: 250px;
+    }
+
+    .title {
+        padding: 45px;
+        font-family: arial;
+    }
+
+    .search {
+        height: 30px;
+        width: 250px;
+    }
+
+    .btn {
+        color: #ffffff;
+        background-color: #007aff;
+        border: none;
+        border-radius: 6px;
+        font-family: Arial;
+        height: 35px;
+        width: 50px;
+    }
+
+    .font {
+        font-family: arial;
+        font-weight: 700;
+    }
+</style>
+
+<body class="tbody" onload="showText()">
+    <div class="bg">
+        <h1 class="title">Nhập tên của bạn</h1>
+        <input type="text" class="search" id="name">&nbsp;
+        <button class="btn" onclick="textName()">Lưu</button>
+        <button class="btn" onclick="changeName()">Sửa</button>
+        <p id="text" class="font"></p>
+    </div>
+</body>
+<script>
+    function textName() {
+        let name = document.getElementById("name").value;
+        localStorage.setItem("name", name);
+        document.getElementById("text").textContent = "👋 Chào bạn, " + name;
+        document.getElementById("name").value = "";
+    }
+    function showText() {
+        let name = localStorage.getItem("name");
+        document.getElementById("text").textContent = "👋 Chào bạn, " + name;
+    }
+    function changeName() {
+        let name = localStorage.getItem("name");
+        document.getElementById("name").value = name;
+    }
+</script>
+
+</html>

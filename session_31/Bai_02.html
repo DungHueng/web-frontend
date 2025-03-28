@@ -8,11 +8,13 @@
 </head>
 <style>
     .container {
+        transition: background 0.3s, color 0.3s;
         background-color: black;
         color: white;
     }
 
     .title {
+        transition: background 0.3s, color 0.3s;
         background-color: white;
         color: black;
     }
@@ -27,7 +29,7 @@
 </body>
 <script>
     document.getElementsByClassName("btn")[0].addEventListener("click", () => {
-        document.getElementsByClassName["container"][0].classList.toggle("title");
+        document.getElementsByClassName("container")[0].classList.toggle("title");
     })        
 </script>
 
